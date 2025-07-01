@@ -50,7 +50,7 @@ target_link_libraries(${LIB_NAME}
     okvis::Kinematics
     okvis::Timing
     okvis::Util
-    brisk::brisk
+    brisk
     ${DBoW2_LIBRARIES}
   PRIVATE
     ${GLOG_LIBRARIES}

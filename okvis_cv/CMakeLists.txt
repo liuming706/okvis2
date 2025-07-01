@@ -51,7 +51,7 @@ target_link_libraries(${LIB_NAME}
     okvis::Time
     okvis::Util
   PRIVATE
-    brisk::brisk
+    brisk
     ${TORCH_LIBRARIES}
 )
 target_compile_features(${LIB_NAME} PUBLIC cxx_std_${OKVIS_CXX_STANDARD})

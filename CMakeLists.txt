@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.8...3.30)
 project(okvis VERSION 2.0.0 LANGUAGES CXX)
+add_compile_options(-mssse3)
 
 # options for build configuration
 option (USE_SYSTEM_BRISK
-        "Use brisk via find_package rather than downloading it as part of okvis" OFF)
+        "Use brisk via find_package rather than downloading it as part of okvis" ON)
 option (USE_SYSTEM_DBOW2
-        "Use DBoW2 via find_package rather than downloading it as part of okvis" OFF)
+        "Use DBoW2 via find_package rather than downloading it as part of okvis" ON)
 option (USE_SYSTEM_CERES
         "Use ceres via find_package rather than downloading it as part of okvis" OFF)
 option (BUILD_APPS
@@ -15,9 +16,9 @@ option (BUILD_TESTS
 option (BUILD_ROS2
         "Builds ros2 wrapper" ON)
 option (HAVE_LIBREALSENSE
-        "Use realsense as part of okvis" ON)
+        "Use realsense as part of okvis" OFF)
 option (USE_NN
-        "Use keypoint classification as part of okvis, requires torch" ON)
+        "Use keypoint classification as part of okvis, requires torch" OFF)
 option (USE_GPU
         "Use keypoint classification with GPU inference, requires torch with Cuda" OFF)
 option (DO_TIMING
