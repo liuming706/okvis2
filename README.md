@@ -96,7 +96,6 @@ https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linu
 
 #### OSX ####
 The following has not extensively been tested, but runs on OSX Monterey-Sonoma (Intel and M1).
-
 This is a pure cmake project.
 
 You will need to install the following dependencies,
@@ -280,6 +279,7 @@ you can run the realsense driver node as
 ... and launch the subscriber in a separate terminal as
 
     ros2 launch okvis okvis_node_subscriber.launch.xml config_filename:=<config.yaml>
+    ros2 launch okvis okvis_node_subscriber_webots.launch.xml config_filename:=/home/ubt/workspace/ros2_ws/src/okvis2/config/webots2.yaml
 
 Note that you may use either `okvis_node_realsense` or `okvis_node_realsense_publisher` to record a
 bag, minimally with
@@ -290,6 +290,8 @@ Finally, you can also process datasets. Currently, the EuRoC format is supported
 as ROS2 bags (db3/mcap/..). Run the respective synchronous (blocking) processing as
 
     ros2 launch okvis okvis_node_synchronous.launch.xml config_filename:=<cfg.yaml> path:=<folder>
+    ros2 launch okvis okvis_node_synchronous.launch.xml config_filename:=/home/ubt/workspace/ros2_ws/src/okvis2/config/webots2.yaml path:=/home/ubt/workspace/datasets/vio_bag_0630_0940
+    ros2 launch okvis okvis_node_synchronous.launch.xml config_filename:=/home/ubt/workspace/ros2_ws/src/okvis2/config/euroc.yaml path:=/home/ubt/workspace/datasets/V1_01_easy/mav0
 
 ### HEALTH WARNING: calibration ###
 
