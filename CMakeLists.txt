@@ -4,9 +4,9 @@ add_compile_options(-mssse3)
 
 # options for build configuration
 option (USE_SYSTEM_BRISK
-        "Use brisk via find_package rather than downloading it as part of okvis" ON)
+        "Use brisk via find_package rather than downloading it as part of okvis" OFF)
 option (USE_SYSTEM_DBOW2
-        "Use DBoW2 via find_package rather than downloading it as part of okvis" ON)
+        "Use DBoW2 via find_package rather than downloading it as part of okvis" OFF)
 option (USE_SYSTEM_CERES
         "Use ceres via find_package rather than downloading it as part of okvis" OFF)
 option (BUILD_APPS
